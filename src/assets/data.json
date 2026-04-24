@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "Understanding React Hooks",
+    "heading": "A Complete Guide to useState and useEffect",
+    "imageUrl": "https://images.unsplash.com/photo-1633356122544-f134324a6cee",
+    "views": 245,
+    "author": "John Doe",
+    "createdAt": "2026-04-08T10:30:00Z"
+  },
+  {
+    "id": 2,
+    "title": "Mastering JavaScript",
+    "heading": "Deep Dive into Closures and Scope",
+    "imageUrl": "https://images.unsplash.com/photo-1627398242454-45a1465c2479",
+    "views": 389,
+    "author": "Jane Smith",
+    "createdAt": "2026-04-07T14:15:00Z"
+  },
+  {
+    "id": 3,
+    "title": "Spring Boot REST APIs",
+    "heading": "Build Scalable Backend Services",
+    "imageUrl": "https://images.unsplash.com/photo-1587620962725-abab7fe55159",
+    "views": 198,
+    "author": "Alex Johnson",
+    "createdAt": "2026-04-06T09:00:00Z"
+  },
+  {
+    "id": 4,
+    "title": "CSS Grid vs Flexbox",
+    "heading": "When to Use What",
+    "imageUrl": "https://images.unsplash.com/photo-1505685296765-3a2736de412f",
+    "views": 156,
+    "author": "Emily Davis",
+    "createdAt": "2026-04-05T18:45:00Z"
+  },
+  {
+    "id": 5,
+    "title": "MongoDB Basics",
+    "heading": "NoSQL Database Explained",
+    "imageUrl": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31",
+    "views": 275,
+    "author": "Michael Brown",
+    "createdAt": "2026-04-04T12:20:00Z"
+  },
+  {
+    "id": 6,
+    "title": "MongoDB Basics",
+    "heading": "NoSQL Database Explained",
+    "imageUrl": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31",
+    "views": 275,
+    "author": "Michael Brown",
+    "createdAt": "2026-04-04T12:20:00Z"
+  }
+]
