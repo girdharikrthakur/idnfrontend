@@ -1,7 +1,7 @@
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import SearchModal from "./SearchModal.jsx";
-import { Search } from "lucide-react";
+import { Search } from "./SearchModal.jsx";
 
 function Navbar({ toggle }) {
   const [user, setUser] = useState({
