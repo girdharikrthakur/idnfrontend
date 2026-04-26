@@ -10,7 +10,7 @@ import ArticlePage from "./pages/ArticlePage.jsx";
 import CategoryPage from "./pages/CategoryPage.jsx";
 import Contact from "./pages/Contact.jsx";
 import SearchPage from "./pages/SearchPage.jsx";
-import OAuthSuccess from "./components/OAuthSuccess";
+import OAuthSuccess from "./components/OAuthSuccess.jsx";
 
 function App() {
   return (
@@ -31,7 +31,8 @@ function App() {
             />
             <Route path="/category/:category" element={<CategoryPage />} />
             <Route path="/oauthsuccess" element={<OAuthSuccess />} />
-            <Route path="/search" element={<Search />} />
+            {/* FIXED: Changed <Search /> to <SearchPage /> */}
+            <Route path="/search" element={<SearchPage />} />
           </Route>
         </Routes>
       </div>
