@@ -17,8 +17,8 @@ function App() {
     <>
       <div className="bg-gray-100">
         <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
+          <Route element={<Layout />}>
+            <Route path="/" element={<Home />} />
             <Route path="/article/:id" element={<ArticlePage />} />
             <Route path="/about" element={<About />} />
             <Route path="/login" element={<Login />} />
@@ -27,11 +27,10 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route
               path="/complete-registration"
-              element={<CompleteRegistration />}
+              element={<CompleteRegistratiogin />}
             />
             <Route path="/category/:category" element={<CategoryPage />} />
             <Route path="/oauthsuccess" element={<OAuthSuccess />} />
-            {/* FIXED: Changed <Search /> to <SearchPage /> */}
             <Route path="/search" element={<SearchPage />} />
           </Route>
         </Routes>
