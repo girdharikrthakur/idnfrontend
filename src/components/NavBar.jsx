@@ -84,7 +84,7 @@ function Navbar({ toggle }) {
           <div className="flex justify-between items-center shadow">
             {/* 🔍 Icon */}
             <button onClick={() => setOpen(true)}>
-              <Search className="w-6 h-6" />
+              <SearchModal className="w-6 h-6" />
             </button>
 
             {/* 🔍 Modal */}

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchContact } from "../api/contact.js";
+import { fetchContact } from "../api/contact";
 import ContactMessage from "../components/ContactMessage.jsx";
 
 export default function ContactList() {
