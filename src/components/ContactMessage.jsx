@@ -16,9 +16,8 @@ export default function ContactMessage({ name, email, message }) {
           <hr />
         </div> */}
         <div className="b p-4 text-white">
-          <p>
-            {" "}
-            <p className="text-blue-300">message: </p>
+          <p className="text-blue-300">message: </p><p>
+
             {message}
           </p>
         </div>

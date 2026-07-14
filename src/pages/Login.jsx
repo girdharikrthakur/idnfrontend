@@ -48,6 +48,10 @@ function Login() {
     window.location.href = "http://localhost:8080/oauth2/authorization/github";
   };
 
+  const handlefacebookLogin = () => {
+    window.location.href = "http://localhost:8080/oauth2/authorization/facebook";
+  };
+
   return (
     <div className="p-8 space-y-4 flex justify-center items-center min-h-full bg-gray-100">
       <div className="bg-white p-8 rounded-2xl shadow-lg w-[400px]">
@@ -119,6 +123,19 @@ function Login() {
               height="40"
               src="https://img.icons8.com/ios-filled/50/github.png"
               alt="github"
+            />
+
+          </button>
+
+          <button
+            onClick={handlefacebookLogin}
+            className="w-half rounded-lg flex items-center justify-center hover:bg-gray-100"
+          >
+            <img
+              width="40"
+              height="40"
+              src="https://img.icons8.com/?size=100&id=118497&format=png&color=000000"
+              alt="facebook"
             />
           </button>
         </div>

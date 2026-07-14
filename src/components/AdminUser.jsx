@@ -36,7 +36,6 @@ export default function AdminUser() {
             <p className="text-sm text-gray-500">Create new User</p>
           </div>
         ) : (
-          // ✅ Responsive wrapper
           <div className="w-full overflow-x-auto">
             <table className="min-w-[600px] w-full border border-gray-200 text-xs sm:text-sm">
               <thead className="bg-gray-100">

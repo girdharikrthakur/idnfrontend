@@ -27,7 +27,6 @@ export default function ContactList() {
         [index]: nextCursor,
       }));
 
-      // ✅ store hasMore per page
       setHasMoreMap((prev) => ({
         ...prev,
         [index]: hasMore,

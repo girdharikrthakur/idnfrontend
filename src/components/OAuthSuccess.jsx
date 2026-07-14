@@ -9,7 +9,7 @@ function OAuthSuccess() {
     const token = params.get("token");
 
     if (token) {
-      localStorage.setItem("accessToken", token);  // ✅ THIS IS MISSING IN YOUR APP
+      localStorage.setItem("accessToken", token);
       navigate("/");
     }
   }, []);

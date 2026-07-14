@@ -10,7 +10,7 @@ function CompleteRegistration() {
 
   const [form, setForm] = useState({
     username: "",
-    password: "",   // ✅ FIXED
+    password: "",
   })
 
   const handleChange = (e) => {
@@ -26,10 +26,10 @@ function CompleteRegistration() {
         token: token,
       })
 
-      console.log("Response:", res.data) // 🔥 debug
+      console.log("Response:", res.data)
 
       localStorage.setItem("accessToken", res.data.accessToken)
-      navigate("/dashboard")
+      navigate("/")
 
     } catch (error) {
       console.error("Full error:", error)

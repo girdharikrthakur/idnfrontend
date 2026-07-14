@@ -12,6 +12,7 @@ import Contact from "./pages/Contact.jsx";
 import SearchPage from "./pages/SearchPage.jsx";
 import OAuthSuccess from "./components/OAuthSuccess.jsx";
 import Layout from "./components/Layout.jsx";
+import NewsEditor from "./pages/NewsEditor.jsx";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/editor" element={<NewsEditor />} />
 
           {/* Dynamic Routes */}
           <Route path="/article/:id" element={<ArticlePage />} />
@@ -31,7 +33,7 @@ function App() {
 
           {/* Feature Routes */}
           <Route path="/search" element={<SearchPage />} />
-          <Route path="/oauthsuccess" element={<OAuthSuccess />} />
+          <Route path="/oauth-success" element={<OAuthSuccess />} />
 
           {/* Fixed Typo Here ✅ */}
           <Route

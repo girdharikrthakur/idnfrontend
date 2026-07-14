@@ -1,37 +1,43 @@
-import { useState } from "react";
+import Navbar from "./NavBar";
+import SecNavBar from "./SecNavBar";
+import Sidebar from "./Sidebar";
+import Footer from "./Footer";
+import { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 
-// Components
-import Navbar from "./NavBar.jsx";
-import SecNavBar from "./SecNavBar.jsx";
-import Sidebar from "./SideBar.jsx";
-import Footer from "./Footer.jsx";
-
-const Layout = () => {
-  // 1. More descriptive state variable names
+function Layout({ children }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-  // 2. Safer state update using the previous state (prev)
   const toggleSidebar = () => setIsSidebarOpen((prev) => !prev);
 
+  // Initialize theme from localStorage or system preference
+  useEffect(() => {
+    const isDark = localStorage.getItem('theme') === 'dark' || 
+      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    
+    if (isDark) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, []);
+
   return (
-    <div className="flex flex-col min-h-screen">
-      {/* 3. Grouping navigation elements inside a semantic <header> */}
-      <header>
+    <div className="flex flex-col min-h-screen font-sans text-slate-900 dark:text-slate-100 relative overflow-x-hidden bg-slate-50 dark:bg-[#0a0a0a] transition-colors duration-300">
+      
+      <div className="relative z-10 flex flex-col min-h-screen w-full">
         <Navbar toggle={toggleSidebar} />
         <SecNavBar />
-      </header>
+        
+        <Sidebar isOpen={isSidebarOpen} toggle={toggleSidebar} />
 
-      <Sidebar isOpen={isSidebarOpen} toggle={toggleSidebar} />
-
-      {/* 4. Using the semantic <main> tag instead of a <div> */}
-      <main className="flex-1">
-        <Outlet />
-      </main>
-
-      <Footer />
+        <main className="flex-1 w-full mx-auto max-w-[1600px] pt-28 pb-12 transition-colors duration-300">
+          {children || <Outlet />}
+        </main>
+        
+        <Footer />
+      </div>
     </div>
   );
-};
+}
 
 export default Layout;
