@@ -1,6 +1,6 @@
 import Navbar from "./NavBar";
 import SecNavBar from "./SecNavBar";
-import Sidebar from "./Sidebar";
+import Sidebar from "./SideBar";
 import Footer from "./Footer";
 import { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
